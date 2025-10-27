@@ -1,0 +1,13 @@
+hostname: r3
+interfaces:
+  GigabitEthernet1:
+    ip: 192.168.1.2
+    mask: 255.255.255.0
+    description: "Core Link"
+bgp:
+  asn: 65001
+  neighbors:
+    - peer_ip: 10.0.0.2
+      remote_as: 65002
+    - peer_ip: 10.0.0.3
+      remote_as: 65003

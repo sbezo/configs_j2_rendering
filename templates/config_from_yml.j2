@@ -1,0 +1,19 @@
+hostname {{ hostname }}
+!
+domain name {{ network.domain }}
+!
+{% for server in network.ntp.servers %}
+ntp server {{ server }}
+{% endfor %}
+!
+{% for intf, config in interfaces.items() %}
+interface {{ intf }}
+ description {{ config.description }}
+ ip address {{ config.ip }} {{ config.mask }}
+!
+{% endfor %}
+!
+router bgp {{ bgp.asn }}
+{% for neighbor in bgp.neighbors %}
+ neighbor {{ neighbor.peer_ip }} remote-as {{ neighbor.remote_as }}
+{% endfor %}

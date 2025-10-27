@@ -1,0 +1,14 @@
+hostname {{ hostname }}
+!
+domain name {{ domain }}
+!
+ntp server {{ ntp1 }}
+ntp server {{ ntp2}}
+!
+interface GigabitEthernet1
+ description {{ GigabitEthernet1_descr }}
+ ip address {{ GigabitEthernet1_ip }} {{ GigabitEthernet1_mask }}
+!
+router bgp {{ asn }}
+ neighbor {{ peer2_ip }} remote-as {{ peer2_asn }}
+ neighbor {{ peer3_ip }} remote-as {{ peer3_asn }}

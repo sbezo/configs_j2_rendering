@@ -1,0 +1,9 @@
+network:
+  domain: example.com
+  ntp:
+    servers:
+      - 10.1.1.1
+      - 10.1.1.2
+  snmp:
+    location: "DataCenter1"
+    contact: "admin@example.com"
