@@ -15,10 +15,14 @@ source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
 and now render config based on template and variables:
-### variables from yaml files
+**variables from yaml files:**
+```
 python3 render_from_yml.py
+```
 
-### variables from xls table
+**variables from xls table:**
+```
 python3 render_from_xls.py
+```
 
 
