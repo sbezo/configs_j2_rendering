@@ -14,7 +14,9 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
-and now render config based on template and variables:
+
+
+And now render config based on template and variables:  
 **variables from yaml files:**
 ```
 python3 render_from_yml.py
